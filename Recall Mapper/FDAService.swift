@@ -8,7 +8,9 @@
 
 import Foundation
 
-let DRUG_ENFORCEMENT_URL = "https://api.fda.gov/drug/enforcement.json";
+let DRUG_ENFORCEMENT_URL = "https://api.fda.gov/drug/enforcement.json"
+let DEVICE_ENFORCEMENT_URL = "https://api.fda.gov/device/enforcement.json"
+let FOOD_ENFORCEMENT_URL = "https://api.fda.gov/food/enforcement.json"
 let API_KEY = "W0AOLQFs6HbOkZD8uIcELIWpxg7kTCAywBcGfDVA"
 let BEGIN_QUERY = "?api_key=\(API_KEY)"
 
@@ -34,7 +36,11 @@ class FDAService {
                                 if let metaDict = dict.objectForKey("meta") {
                                     if let disclaimer = metaDict.objectForKey("disclaimer") as? String {
                                         dispatch_async(dispatch_get_main_queue(),{
-                                            self.ref.updateLabelText(disclaimer)})
+                                            self.ref.updateDisclaimerLabelText(disclaimer)})
+                                    }
+                                    if let license = metaDict.objectForKey("license") as? String {
+                                        dispatch_async(dispatch_get_main_queue(),{
+                                            self.ref.updateLicenseLabelText(license)})
                                     }
                                 }
                             }

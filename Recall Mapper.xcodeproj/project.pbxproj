@@ -16,7 +16,7 @@
 		7E510D4B1B5FDD7D003377F5 /* Recall_MapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E510D4A1B5FDD7D003377F5 /* Recall_MapperTests.swift */; };
 		7E510D561B5FDD7D003377F5 /* Recall_MapperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E510D551B5FDD7D003377F5 /* Recall_MapperUITests.swift */; };
 		7E510D641B5FDFC9003377F5 /* FDAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E510D631B5FDFC9003377F5 /* FDAService.swift */; };
-		7E510D651B5FE916003377F5 /* FDAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E510D631B5FDFC9003377F5 /* FDAService.swift */; };
+		7E510D671B600C71003377F5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E510D661B600C71003377F5 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +52,7 @@
 		7E510D551B5FDD7D003377F5 /* Recall_MapperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recall_MapperUITests.swift; sourceTree = "<group>"; };
 		7E510D571B5FDD7D003377F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E510D631B5FDFC9003377F5 /* FDAService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDAService.swift; sourceTree = "<group>"; };
+		7E510D661B600C71003377F5 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +103,10 @@
 		7E510D311B5FDD7C003377F5 /* Recall Mapper */ = {
 			isa = PBXGroup;
 			children = (
+				7E510D681B602DFB003377F5 /* Model */,
 				7E510D321B5FDD7C003377F5 /* AppDelegate.swift */,
 				7E510D341B5FDD7C003377F5 /* ViewController.swift */,
+				7E510D661B600C71003377F5 /* MapViewController.swift */,
 				7E510D361B5FDD7C003377F5 /* Main.storyboard */,
 				7E510D631B5FDFC9003377F5 /* FDAService.swift */,
 				7E510D3C1B5FDD7D003377F5 /* Assets.xcassets */,
@@ -130,6 +133,13 @@
 				7E510D571B5FDD7D003377F5 /* Info.plist */,
 			);
 			path = "Recall MapperUITests";
+			sourceTree = "<group>";
+		};
+		7E510D681B602DFB003377F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +275,7 @@
 				7E510D351B5FDD7C003377F5 /* ViewController.swift in Sources */,
 				7E510D3B1B5FDD7D003377F5 /* Recall_Mapper.xcdatamodeld in Sources */,
 				7E510D331B5FDD7C003377F5 /* AppDelegate.swift in Sources */,
+				7E510D671B600C71003377F5 /* MapViewController.swift in Sources */,
 				7E510D641B5FDFC9003377F5 /* FDAService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,7 +285,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E510D4B1B5FDD7D003377F5 /* Recall_MapperTests.swift in Sources */,
-				7E510D651B5FE916003377F5 /* FDAService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

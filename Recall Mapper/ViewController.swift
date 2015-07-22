@@ -10,11 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var disclaimerLabel: UILabel!
+    @IBOutlet weak var licenseLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.callAPI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,15 +24,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func updateLabelText(text:String) -> Void{
-        self.testLabel.text = text
-        self.testLabel.setNeedsLayout()
+    func updateDisclaimerLabelText(text:String) -> Void{
+        self.disclaimerLabel.text = text
+        self.disclaimerLabel.setNeedsUpdateConstraints()
+        self.disclaimerLabel.setNeedsLayout()
     }
     
-    @IBAction func callAPI() -> Void {
+    func updateLicenseLabelText(text:String) -> Void{
+        self.licenseLabel.text = text
+        self.licenseLabel.setNeedsLayout()
+    }
+    
+    func callAPI() -> Void {
         let service = FDAService()
         service.ref = self;
-        let testUrl = NSURL(string: "https://api.fda.gov/drug/enforcement.json?search=_exists_:city+AND+_exists_:state")
+        let testUrl = NSURL(string: "https://api.fda.gov/drug/enforcement.json?")
         if let url = testUrl {
             service.executeApiQuery(url)
         }
